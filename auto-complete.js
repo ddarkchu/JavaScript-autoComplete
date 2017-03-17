@@ -284,12 +284,12 @@ var autoComplete = (function() {
 })();
 
 (function() {
-    if (typeof define === 'function' && define.amd)
+    if (typeof define === 'function' && define.amd) // amd module 체크
         define('autoComplete', function() {
             return autoComplete;
         });
-    else if (typeof module !== 'undefined' && module.exports)
+    else if (typeof module !== 'undefined' && module.exports) // commonjs module 체크
         module.exports = autoComplete;
-    else
+    else // 브라우저 객체.
         window.autoComplete = autoComplete;
 })();
